@@ -1,7 +1,6 @@
 package main
 
 import ("flag"
-		"server"
 )
 
 func main()  {
@@ -11,6 +10,6 @@ func main()  {
 	maxOpenConns := flag.Int("maxOpenConns",5,"MySQL maxOpenConns")
 	maxIdleConns := flag.Int("maxIdleConns",5,"MySQL maxIdleConns")
 	flag.Parse()
-	server.StartHttpServer(*host,*port,*connect,*maxOpenConns,*maxIdleConns)
+	StartHttpServer(*host,*port,*connect,*maxOpenConns,*maxIdleConns)
 
 }
